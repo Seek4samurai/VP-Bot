@@ -62,7 +62,7 @@ if __name__ == "__main__":
             print(results)
             speak(results)
 
-        if 'who are you' or 'tell me something about yourself' or 'who is VP' in query:
+        elif 'who are you VP' or 'tell me something about yourself VP' or 'who is VP' in query:
             about()
 
         # Browser commands
