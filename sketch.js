@@ -1,3 +1,4 @@
+// initialized variables
 let faceapi;
 let detections = [];
 
@@ -5,13 +6,15 @@ let video;
 let canvas;
 
 function setup() {
-  canvas = createCanvas(1080, 720);
+  canvas = createCanvas(1080, 720); // canvas window
   canvas.id("canvas");
 
+  // getting video
   video = createCapture(video);
   video.id("video");
   video.size(width, height);
 
+  // marking face
   const faceOptions = {
     withLandmarks: true,
     withExpressions: true,
@@ -23,6 +26,7 @@ function setup() {
   faceapi = ml5.faceApi(video, faceOptions, faceReady);
 }
 
+// on face detection
 function faceReady() {
   faceapi.detect(gotFaces);
 }
@@ -63,8 +67,8 @@ function drawLandmarks(detections) {
     for (f = 0; f < detections.length; f++) {
       let points = detections[f].landmarks.positions;
       for (let i = 0; i < points.length; i++) {
-        stroke(44, 169, 225);
-        strokeWeight(3);
+        stroke(47, 255, 0); // points color
+        strokeWeight(5); // points weight
         point(points[i]._x, points[i]._y);
       }
     }
