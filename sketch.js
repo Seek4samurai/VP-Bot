@@ -90,19 +90,14 @@ function drawExpressions(detections, x, y, textYSpace) {
     text("anger:        " + nf(angry * 100, 2, 2) + "%", x, y + textYSpace * 2);
     text("sad:            " + nf(sad * 100, 2, 2) + "%", x, y + textYSpace * 3);
     text(
-      "disgusted: " + nf(disgusted * 100, 2, 2) + "%",
+      "surprised:  " + nf(surprised * 100, 2, 2) + "%",
       x,
       y + textYSpace * 4
     );
     text(
-      "surprised:  " + nf(surprised * 100, 2, 2) + "%",
-      x,
-      y + textYSpace * 5
-    );
-    text(
       "fear:           " + nf(fearful * 100, 2, 2) + "%",
       x,
-      y + textYSpace * 6
+      y + textYSpace * 5
     );
   } else {
     //If no faces is detected:
@@ -110,8 +105,7 @@ function drawExpressions(detections, x, y, textYSpace) {
     text("happiness: ", x, y + textYSpace);
     text("anger: ", x, y + textYSpace * 2);
     text("sad: ", x, y + textYSpace * 3);
-    text("disgusted: ", x, y + textYSpace * 4);
-    text("surprised: ", x, y + textYSpace * 5);
-    text("fear: ", x, y + textYSpace * 6);
+    text("surprised: ", x, y + textYSpace * 4);
+    text("fear: ", x, y + textYSpace * 5);
   }
 }
